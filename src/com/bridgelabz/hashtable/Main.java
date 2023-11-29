@@ -3,8 +3,9 @@ package com.bridgelabz.hashtable;
 //Main class
 public class Main {
     public static void main(String[] args) {
-        String sentence = "To be or not to be";
-        String[] words = sentence.split(" ");
+        String paragraph = "Paranoids are not paranoid because they are paranoid but "
+                + "because they keep putting themselves deliberately into paranoid avoidable situations";
+        String[] words = paragraph.split(" ");
 
         MyHashMap<String, Integer> wordFrequencyMap = new MyHashMap<>(10);
 
