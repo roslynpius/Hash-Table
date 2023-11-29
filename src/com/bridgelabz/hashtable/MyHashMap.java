@@ -47,6 +47,19 @@ public class MyHashMap<K, V> {
         bucket.add(newNode); // Add a new node if the key doesn't exist
     }
 
+    /**
+     *
+     * @desc Remove input word from the sentence
+     * @param key word to be removed
+     */
+    public void remove(K key) {
+        int index = getBucketIndex(key);
+        LinkedList<MyMapNode<K, V>> bucket = buckets[index];
+
+        // Find and remove the node with the specified key
+        bucket.removeIf(node -> node.key.equals(key));
+    }
+
 
     /**
      * @desc Checking if key exists and returns frequency
